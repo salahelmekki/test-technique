@@ -1,0 +1,25 @@
+<!-- add-item-dialog.component.html -->
+<h2 mat-dialog-title>Add New Item</h2>
+<mat-dialog-content>
+  <form (submit)="submitForm()">
+    <mat-form-field>
+      <input matInput placeholder="Name" [(ngModel)]="formData.name" [ngModelOptions]="{standalone: true}" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Weight" [(ngModel)]="formData.weight" [ngModelOptions]="{standalone: true}" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Quantity" type="number" [(ngModel)]="formData.quantity" [ngModelOptions]="{standalone: true}" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Price" [(ngModel)]="formData.price" [ngModelOptions]="{standalone: true}" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Image URL" [(ngModel)]="formData.imageUrl" [ngModelOptions]="{standalone: true}" required>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button (click)="submitForm()">Add</button>
+</mat-dialog-actions>
