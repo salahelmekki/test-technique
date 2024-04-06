@@ -1,0 +1,39 @@
+.example-card {
+    width: 320px;
+    height: 140px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    padding-right: 4px;
+  }
+  .mat-mdc-card-content {
+    display: flex;
+    justify-content: start;
+  }
+  .mat-mdc-card-content:first-child {
+    padding-top: 0;
+  }
+  .mat-mdc-card-content {
+    padding: 0;
+  }
+  .mdc-card__media:first-child {
+    border-radius: 8px;
+  }
+  .mat-mdc-card-xl-image {
+    width: 140px;
+    height: 140px;
+    margin-right: 15px;
+    border-radius: 8px;
+  }
+  .align-item-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+  }
+  .delete-button {
+    z-index: 1;
+    position: absolute;
+    background: #BB0A2154;
+    bottom: 6px;
+    left: 4px;
+  
+  }

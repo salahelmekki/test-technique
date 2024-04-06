@@ -1,4 +1,3 @@
-
 <div class="container">
   <div class="row mt-5">
     <div>
@@ -14,7 +13,11 @@
                 class="form-control mr-2"
                 placeholder="Recherche..."
               />
-              <button class="btn btn-primary ml-5" type="button" (click)="openDialog()">
+              <button
+                class="btn btn-primary ml-5"
+                type="button"
+                (click)="openDialog()"
+              >
                 New Item
               </button>
             </div>
@@ -28,20 +31,12 @@
           class="item-list row"
           (cdkDropListDropped)="drop($event)"
         >
-          <mat-card class="example-card" *ngFor="let item of all" cdkDrag>
-            <mat-card-content>
-              <button mat-icon-button class="delete-button" color="warn" (click)="deleteItem(item, 'all')">
-                <mat-icon aria-hidden="false" aria-label="Delete">delete</mat-icon>
-              </button>
-              <img mat-card-xl-image src="{{ item.imageUrl }}" />
-              <div class="align-item-center">
-                <p>Name: {{ item.name }}</p>
-                <p>Weight: {{ item.weight }}</p>
-                <p>Quantity: {{ item.quantity }}</p>
-                <p>Price: {{ item.price }}</p>
-              </div>
-            </mat-card-content>
-          </mat-card>
+          <app-item-card
+            *ngFor="let item of all"
+            [item]="item"
+            (delete)="deleteItem($event, 'all')"
+            class="col-auto"
+          ></app-item-card>
         </div>
       </div>
     </div>
@@ -61,26 +56,17 @@
             class="item-list"
             (cdkDropListDropped)="drop($event)"
           >
-            <mat-card class="example-card" *ngFor="let item of todo" cdkDrag>
-              <mat-card-content>
-                <button mat-icon-button class="delete-button" color="warn" (click)="deleteItem(item, 'todo')">
-                  <mat-icon aria-hidden="false" aria-label="Delete">delete</mat-icon>
-                </button>
-                <img mat-card-xl-image src="{{ item.imageUrl }}" />
-                <div class="align-item-center">
-                  <p>Name: {{ item.name }}</p>
-                  <p>Weight: {{ item.weight }}</p>
-                  <p>Quantity: {{ item.quantity }}</p>
-                  <p>Price: {{ item.price }}</p>
-                </div>
-              </mat-card-content>
-            </mat-card>
+            <app-item-card
+              *ngFor="let item of todo"
+              [item]="item"
+              (delete)="deleteItem($event, 'all')"
+            ></app-item-card>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="drag-container drag-container--origin">
-          <div class="section-heading">Vegetables ({{done.length}})</div>
+          <div class="section-heading">Vegetables ({{ done.length }})</div>
           <div
             cdkDropList
             id="includeList"
@@ -93,26 +79,17 @@
             class="item-list"
             (cdkDropListDropped)="drop($event)"
           >
-            <mat-card class="example-card" *ngFor="let item of done" cdkDrag>
-              <mat-card-content>
-                <button mat-icon-button class="delete-button" color="warn" (click)="deleteItem(item, 'done')">
-                  <mat-icon aria-hidden="false" aria-label="Delete">delete</mat-icon>
-                </button>
-                <img mat-card-xl-image src="{{ item.imageUrl }}" />
-                <div class="align-item-center">
-                  <p>Name: {{ item.name }}</p>
-                  <p>Weight: {{ item.weight }}</p>
-                  <p>Quantity: {{ item.quantity }}</p>
-                  <p>Price: {{ item.price }}</p>
-                </div>
-              </mat-card-content>
-            </mat-card>
+            <app-item-card
+              *ngFor="let item of done"
+              [item]="item"
+              (delete)="deleteItem($event, 'all')"
+            ></app-item-card>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="drag-container drag-container--origin">
-          <div class="section-heading">Meats ({{review.length}})</div>
+          <div class="section-heading">Meats ({{ review.length }})</div>
           <div
             cdkDropList
             id="excludeList"
@@ -125,20 +102,11 @@
             class="item-list"
             (cdkDropListDropped)="drop($event)"
           >
-            <mat-card class="example-card" *ngFor="let item of review" cdkDrag>
-              <mat-card-content>
-                <button mat-icon-button class="delete-button" color="warn" (click)="deleteItem(item, 'review')">
-                  <mat-icon aria-hidden="false" aria-label="Delete">delete</mat-icon>
-                </button>
-                <img mat-card-xl-image src="{{ item.imageUrl }}" />
-                <div class="align-item-center">
-                  <p>Name: {{ item.name }}</p>
-                  <p>Weight: {{ item.weight }}</p>
-                  <p>Quantity: {{ item.quantity }}</p>
-                  <p>Price: {{ item.price }}</p>
-                </div>
-              </mat-card-content>
-            </mat-card>
+            <app-item-card
+              *ngFor="let item of review"
+              [item]="item"
+              (delete)="deleteItem($event, 'all')"
+            ></app-item-card>
           </div>
         </div>
       </div>

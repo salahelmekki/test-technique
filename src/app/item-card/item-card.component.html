@@ -1,0 +1,15 @@
+<mat-card class="example-card col-md-4"  cdkDrag>
+    <mat-card-content>
+      <button mat-icon-button class="delete-button" color="warn" (click)="onDeleteClick()">
+        <mat-icon aria-hidden="false" aria-label="Delete">delete</mat-icon>
+      </button>
+      <img mat-card-xl-image src="{{ item.imageUrl }}" />
+      <div class="align-item-center">
+        <p>Name: {{ item.name }}</p>
+        <p>Weight: {{ item.weight }}</p>
+        <p>Quantity: {{ item.quantity }}</p>
+        <p>Price: {{ item.price }}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  
