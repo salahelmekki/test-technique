@@ -20,6 +20,6 @@
   </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button mat-dialog-close (click)="closeDialog()">Cancel</button>
   <button mat-button (click)="submitForm()">Add</button>
 </mat-dialog-actions>

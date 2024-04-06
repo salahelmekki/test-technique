@@ -36,4 +36,8 @@ export class AddItemDialogComponent {
   submitForm() {
     this.dialogRef.close(this.formData);
   }
+  
+  closeDialog(): void {
+    this.dialogRef.close();
+  }
 }

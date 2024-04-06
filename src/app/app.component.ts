@@ -111,6 +111,7 @@ export class AppComponent {
       );
     }
   }
+  
   openDialog(): void {
     const dialogRef = this.dialog.open(AddItemDialogComponent, {
       width: '500px'
@@ -122,9 +123,9 @@ export class AppComponent {
       }
     });
   }
+
   deleteItem(item: any, arrayName: string) {
     let targetArray: any[];
-    
     switch (arrayName) {
       case 'all':
         targetArray = this.all;
