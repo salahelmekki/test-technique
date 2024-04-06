@@ -80,3 +80,22 @@
 .item-list.cdk-drop-list-dragging .item-box:not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
+.display-flex {
+  display: flex;
+}
+.side-container {
+  width: 30%;
+  margin: 0 5px 25px 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.item-line {
+  border: 1px solid #cfd1d4;
+}
+
+.item-line p {
+  margin: 0;
+  padding: 10px; /* Adjust padding inside the box */
+
+}
