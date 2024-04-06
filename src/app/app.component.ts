@@ -17,18 +17,18 @@ export class AppComponent {
   title = 'test-technique';
   optionSelected = 1;
 
-  all: any[] = [{ 
+  all: any[] = [ { 
+    name: 'ananas', 
+    weight: '100g', 
+    quantity: 5, 
+    price: '$5', 
+    imageUrl: 'assets/ananas.jpg' 
+  },{
     name: 'Apple', 
     weight: '100g', 
     quantity: 5, 
     price: '$5', 
     imageUrl: 'assets/pome.jpeg' 
-  },{ 
-    name: 'Lentils', 
-    weight: '100g', 
-    quantity: 5, 
-    price: '$5', 
-    imageUrl: 'assets/Lentils.jpeg' 
   },
   { 
     name: 'Pea', 
@@ -49,11 +49,31 @@ export class AppComponent {
     quantity: 5, 
     price: '$5', 
     imageUrl: 'assets/meat.jpeg' 
+  },
+  { 
+    name: 'Fraise', 
+    weight: '100g', 
+    quantity: 5, 
+    price: '$5', 
+    imageUrl: 'assets/fraise.jpg' 
+  },
+  ];
+
+  todo: any[] = [{ 
+    name: 'orange', 
+    weight: '100g', 
+    quantity: 5, 
+    price: '$5', 
+    imageUrl: 'assets/orange.jpg' 
+  },];
+
+  done: any[] = [{ 
+    name: 'Lentils', 
+    weight: '100g', 
+    quantity: 5, 
+    price: '$5', 
+    imageUrl: 'assets/Lentils.jpeg' 
   }];
-
-  todo: any[] = [];
-
-  done: any[] = [];
 
   review: any[] = [];
 
